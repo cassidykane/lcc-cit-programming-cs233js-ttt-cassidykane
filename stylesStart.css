@@ -1,7 +1,13 @@
-.square {
-  border: 2px solid black;
-}  
-
 .red {
   color:red;
+}
+
+.row, #status {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#board {
+  margin-top: 10%;
 }

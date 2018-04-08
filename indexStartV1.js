@@ -21,12 +21,9 @@ function init()
         cell = document.getElementsByTagName("button")[i];
         cell.onclick = handleClick;
     }  
-    // document.getElementsByTagName("button").onclick = handleClick;
-    // addEventListener("click", handleClick);
 }
 
 function handleClick() {
-    console.log("clicked");
     // Get the id from the square and put it in a variable
     // Remember that the id is an integer 0 - 8
     var i = this.id;
@@ -83,7 +80,11 @@ function highlightWinner() {
 }
 
 function disableAll() {
-    document.querySelectorAll(".col-xs-4 square").onclick = function() {};
+    var cell;
+    for (var i = 0; i < 9; i++) {
+        cell = document.getElementsByTagName("button")[i];
+        cell.onclick = function() {};
+    }  
     // Set the onclick handler for all squares to function that does nothing
     // The id of the square is a number 0 - 8
 }
